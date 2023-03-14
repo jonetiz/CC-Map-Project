@@ -2,7 +2,7 @@ import pandas as pd
 import math as m
 import classes as c
 import numpy as np
-d_f = pd.read_csv("/Users/normawallace/Desktop/magpie/distance.csv",usecols= [0,2],nrows =94,header = None)
+d_f = pd.read_csv("distance.csv",usecols= [0,2],nrows =94,header = None)
 names = []
 for i in range(len(d_f)):
     # print(list(d_f.iloc[i]))

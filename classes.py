@@ -4,14 +4,17 @@ class Node:
         self.connections: list[tuple] = []
     
     def __repr__(self):
-        return f'{self.info}'
+        return f'<{self.info}>'
 
-    def connect(self, other: 'Node', weight: int, omnidirectional = False):
+    def __eq__(self, other: object):
+        return self is other
+
+    def __eq__(self, other: str):
+        """Returns true if info is the same"""
+        return self.info == other
+
+    def connect(self, other: 'Node', weight: int):
         self.connections.append((other, weight))
-        # if we want connection to go both ways, append self to other.connections
-        # TODO: find a good way to manage different weights in both directions
-        if omnidirectional:
-            other.connections.append((self, weight))
 
     def sort_nodes(self):
         #print(self.connections)

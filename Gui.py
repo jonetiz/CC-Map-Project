@@ -16,11 +16,6 @@ words2 = "Ending Location"
 label2 = tk.Label(map, bg= 'white', text = words2, font = (24) , anchor = 'center')
 label2.place(x= 650, y= 50, anchor = 'center')
 
-# This stuff might be unneeded
-# def show():
-#     drop1.configure(text= clicked.get())
-
-# node_list is going to be changed
 options = node_list
 
 clicked = tk.StringVar()

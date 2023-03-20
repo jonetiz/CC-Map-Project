@@ -1,5 +1,7 @@
 from classes import *
 from pand import generate_nodes
+from gui import map
+
 def main():
     # n1 = Node("Place 1")
     # n2 = Node("Place 2")
@@ -27,10 +29,11 @@ def main():
 
     # print(n1.find_path(n7))
 
-    nodes = generate_nodes()
-    a: Node = nodes['Lot D']
-    b: Node = nodes['Sequoia']
-    print(a.find_path(b))
+    # nodes = generate_nodes()
+    # a: Node = nodes['Lot D']
+    # b: Node = nodes['Sequoia']
+    # print(a.find_path(b))
+    map.mainloop()
     
 if __name__ == "__main__":
     main()
